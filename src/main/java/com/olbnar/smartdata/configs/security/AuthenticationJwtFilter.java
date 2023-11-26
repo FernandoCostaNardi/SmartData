@@ -19,10 +19,11 @@ import java.io.IOException;
 import java.util.UUID;
 
 public class AuthenticationJwtFilter extends OncePerRequestFilter {
-
-    Logger log = LogManager.getLogger(AuthenticationEntryPoint.class);
+    
     @Autowired
     JwtProvider jwtProvider;
+
+    Logger log = LogManager.getLogger(AuthenticationEntryPoint.class);
 
     @Override
     protected void doFilterInternal(HttpServletRequest request, HttpServletResponse response, FilterChain filterChain) throws ServletException, IOException {
